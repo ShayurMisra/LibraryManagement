@@ -1,0 +1,224 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('../Img/bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Dashboard Layout */
+.dashboard {
+    display: flex;
+    height: 100vh;
+}
+
+/* Blurred Background Container Styles */
+.container {
+    backdrop-filter: blur(10px);
+    border: 2px solid white;
+    border-radius: 15px;
+    margin: 20px;
+    padding: 20px;
+}
+
+/* Sidebar Container */
+.sidebar-container {
+    width: 250px;
+    flex-shrink: 0;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    color: #fff;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li.active a {
+    background-color: rgba(255, 255, 255, 0.726);
+    border-radius: 5px;
+    color: rgb(231, 22, 214);
+}
+
+/* Main Content Container */
+.main-content-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Hide scrollbar */
+}
+
+/* Main Content Styles */
+.main-content {
+    flex: 1;
+    overflow-y: auto; /* Allow vertical scrolling */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer and Edge */
+}
+
+/* Hide scrollbar for WebKit browsers */
+.main-content::-webkit-scrollbar {
+    display: none;
+}
+
+/* Top Bar Styles */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+/* Content Area Styles */
+.content h1 {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+form {
+    background: rgba(255, 255, 255, 0.192);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+form h3 {
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-size: 24px;
+}
+
+form input {
+    width: 96%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+form button {
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #ffffff;
+    color: #000;
+}
+
+/* User List Styles */
+.user-list {
+    background: rgba(255, 255, 255, 0.356);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.user-list h3 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+}
+
+.user-item {
+    background: #ffffffad;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.user-item h4 {
+    margin: 0;
+    font-size: 20px;
+    color: #333;
+}
+
+.user-item p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.user-item .actions {
+    margin-top: 10px;
+}
+
+.user-item button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.user-item button:hover {
+    background-color: #c82333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .sidebar-container {
+        width: 100%;
+    }
+
+    .main-content-container {
+        padding: 10px;
+    }
+
+    .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

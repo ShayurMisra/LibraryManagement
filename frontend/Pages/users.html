@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users Dashboard</title>
+    <link rel="stylesheet" href="../CSS/users.css">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar Container -->
+        <div class="container sidebar-container">
+            <div class="sidebar">
+                <h2>Dashboard</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="books.html">Books</a></li>
+                    <li class="active"><a href="users.html">Users</a></li>
+                    <li><a href="transactions.html">Transactions</a></li>
+                    <li><a href="search.html">Search</a></li>
+                    <li><a href="login.html">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Main Content Container -->
+        <div class="container main-content-container">
+            <div class="main-content">
+                <!--Top Bar-->
+                <div class="top-bar">
+                    <div class="user-info">
+                        <h2>User Management</h2>
+                    </div>
+                </div>
+
+                <!-- Content Area -->
+                <div class="content">
+                    <form id="addUserForm">
+                        <h3>Add New User</h3>
+
+                        <label for="userFullName">Full Name:</label>
+                        <input type="text" id="userFullName" name="userFullName" required>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+
+                        <label for="mobileNumber">Mobile Number:</label>
+                        <input type="text" id="mobileNumber" name="mobileNumber" required>
+
+                        <label for="userType">User Type:</label>
+                        <input type="text" id="userType" name="userType" required>
+
+                        <label for="age">Age:</label>
+                        <input type="number" id="age" name="age">
+
+                        <label for="gender">Gender:</label>
+                        <input type="text" id="gender" name="gender">
+
+                        <label for="dob">Date of Birth:</label>
+                        <input type="date" id="dob" name="dob">
+
+                        <label for="address">Address:</label>
+                        <input type="text" id="address" name="address">
+
+                        <label for="isAdmin">Is Admin:</label>
+                        <select id="isAdmin" name="isAdmin">
+                            <option value="false">No</option>
+                            <option value="true">Yes</option>
+                        </select>
+
+                        <button type="submit">Add User</button>
+                    </form>
+
+                    <!--User List-->
+                    <div id="userList" class="user-list">
+                        <h3>All Users</h3>
+                        <!-- User list will be populated here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+                <!-- Edit User Form (Initially Hidden) -->
+        <div id="editUserFormContainer" style="display: none;">
+            <h3>Edit User</h3>
+            <form id="editUserForm">
+                <input type="hidden" id="editUserId" name="userId">
+                <label for="editUserFullName">Full Name:</label>
+                <input type="text" id="editUserFullName" name="userFullName" required>
+                <label for="editEmail">Email:</label>
+                <input type="email" id="editEmail" name="email" required>
+                <label for="editMobileNumber">Mobile Number:</label>
+                <input type="text" id="editMobileNumber" name="mobileNumber" required>
+                <label for="editUserType">User Type:</label>
+                <input type="text" id="editUserType" name="userType" required>
+                <label for="editAge">Age:</label>
+                <input type="number" id="editAge" name="age">
+                <label for="editGender">Gender:</label>
+                <input type="text" id="editGender" name="gender">
+                <label for="editDob">Date of Birth:</label>
+                <input type="date" id="editDob" name="dob">
+                <label for="editAddress">Address:</label>
+                <input type="text" id="editAddress" name="address">
+                <label for="editIsAdmin">Is Admin:</label>
+                <input type="checkbox" id="editIsAdmin" name="isAdmin">
+                <button type="submit">Update User</button>
+                <button type="button" id="cancelEdit">Cancel</button>
+            </form>
+        </div>
+        
+    <script src="../JS/users.js"></script>
+</body>
+</html>

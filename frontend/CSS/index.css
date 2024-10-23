@@ -1,0 +1,160 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('../Img/bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Dashboard Layout */
+.dashboard {
+    display: flex;
+    height: 100vh;
+}
+
+/* Blurred Background Container Styles */
+.container {
+    backdrop-filter: blur(10px);
+    border: 2px solid white;
+    border-radius: 15px;
+    margin: 20px;
+    padding: 20px;
+    overflow: hidden; /* Ensure no scrollbars appear on the container */
+}
+
+/* Sidebar Container */
+.sidebar-container {
+    width: 250px;
+    flex-shrink: 0;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    color: #fff;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li.active a {
+    background-color: rgba(255, 255, 255, 0.726);
+    border-radius: 5px;
+    color: rgb(231, 22, 214);
+}
+
+/* Main Content Container */
+.main-content-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Hide overflow on main container */
+}
+
+/* Main Content Styles */
+.main-content {
+    flex: 1;
+    overflow-y: scroll; /* Enable vertical scrolling */
+}
+
+/* Hide scrollbar for WebKit browsers */
+.main-content::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in WebKit browsers */
+}
+
+/* Hide scrollbar for Firefox */
+.main-content {
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+}
+
+/* Content Area Styles */
+.content {
+    color: #fff;
+    overflow-y: auto; /* Ensure content area scrolls if needed */
+}
+
+.content h1 {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.content p {
+    margin: 0;
+    line-height: 1.6;
+    font-size: 16px; /* Adjusted font size for better readability */
+}
+
+.content ul {
+    margin: 0;
+    padding-left: 20px; /* Add padding for list items */
+}
+
+.content ul li {
+    margin-bottom: 10px; /* Adjust margin between list items */
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    color: #333;
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.card p {
+    font-size: 28px;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .sidebar-container {
+        width: 100%;
+    }
+
+    .main-content-container {
+        padding: 10px;
+    }
+
+    .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

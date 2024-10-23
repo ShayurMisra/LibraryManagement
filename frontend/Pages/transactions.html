@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transactions Dashboard</title>
+    <link rel="stylesheet" href="../CSS/transactions.css">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar Container -->
+        <div class="container sidebar-container">
+            <div class="sidebar">
+                <h2>Dashboard</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="books.html">Books</a></li>
+                    <li><a href="users.html">Users</a></li>
+                    <li class="active"><a href="transactions.html">Transactions</a></li>
+                    <li><a href="search.html">Search</a></li>
+                    <li><a href="login.html">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Main Content Container -->
+        <div class="container main-content-container">
+            <div class="main-content">
+                <!-- Create Transaction Form -->
+                <div class="form-container">
+                    <h3>Create Transaction</h3>
+                    <form id="create-transaction-form">
+                        <label for="bookId">Book ID:</label>
+                        <input type="text" id="bookId" name="bookId" required>
+
+                        <label for="borrowerId">Borrower ID:</label>
+                        <input type="text" id="borrowerId" name="borrowerId" required>
+
+                        <label for="bookName">Book Name:</label>
+                        <input type="text" id="bookName" name="bookName" required>
+
+                        <label for="borrowerName">Borrower Name:</label>
+                        <input type="text" id="borrowerName" name="borrowerName" required>
+
+                        <label for="transactionType">Transaction Type:</label>
+                        <select id="transactionType" name="transactionType" required>
+                            <option value="Borrow">Borrow</option>
+                            <option value="Return">Return</option>
+                        </select>
+
+                        <label for="fromDate">From Date:</label>
+                        <input type="date" id="fromDate" name="fromDate" required>
+
+                        <label for="toDate">To Date:</label>
+                        <input type="date" id="toDate" name="toDate" required>
+
+                        <input type="submit" value="Create Transaction">
+                    </form>
+                </div>
+
+                <!-- View Transactions Section -->
+                <div class="transactions-container">
+                    <h3>All Transactions</h3>
+                    <table id="transactions-table">
+                        <thead>
+                            <tr>
+                                <th>Book Name</th>
+                                <th>Borrower Name</th>
+                                <th>Transaction Type</th>
+                                <th>From Date</th>
+                                <th>To Date</th>
+                                <th>Return Date</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Transactions will be inserted here dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../JS/transactions.js"></script>
+</body>
+</html>
